@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyxnwncl3jscm"]
+
+[ext_resource type="Script" uid="uid://diuylu3ex2q8l" path="res://Scripts/player.gd" id="1_jkl10"]
+[ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://icon.svg" id="2_4nf2p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_58ov2"]
+radius = 66.0984
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op41l"]
+size = Vector2(945, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="A" type="CharacterBody2D" parent="."]
+position = Vector2(0, -77)
+script = ExtResource("1_jkl10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A"]
+shape = SubResource("CircleShape2D_58ov2")
+
+[node name="Sprite2D" type="Sprite2D" parent="A"]
+texture = ExtResource("2_4nf2p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_op41l")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(4, 2)
+scale = Vector2(7.32031, 0.195313)
+texture = ExtResource("2_4nf2p")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -253)
