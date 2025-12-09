@@ -38,5 +38,4 @@ texture = ExtResource("2_4nf2p")
 position = Vector2(0, -253)
 
 [node name="Placeholder Enemy" parent="." instance=ExtResource("3_4nf2p")]
-position = Vector2(352, -77)
-copy_jump = true
+position = Vector2(338, -77)

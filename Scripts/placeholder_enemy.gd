@@ -1,10 +1,16 @@
 extends CharacterBody2D
 
+@export_group("Copying")
 @export var copy_movement: bool
 @export var mirror_movement: bool
 @export var copy_jump: bool
 @export var movement_multiplier: float
 @export var jump_multiplier: float
+
+@export_group("independant moving")
+@export var horizontal_speed: float
+@export var jump_interval: float
+@export var avoid_edges: bool
 
 var COPY_SPEED = 500.0
 var JUMP_VELOCITY = -700.0
