@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0amig2pnp45p"]
+
+[ext_resource type="Script" uid="uid://diuylu3ex2q8l" path="res://Scripts/player.gd" id="1_42goo"]
+[ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="2_xn255"]
+[ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Scenes/placeholder_enemy.tscn" id="3_x887k"]
+[ext_resource type="Script" uid="uid://phyijtvudbvd" path="res://Scripts/spikes.gd" id="3_xn255"]
+[ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="5_x887k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nf2p"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_op41l"]
+size = Vector2(438, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42goo"]
+size = Vector2(247, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn255"]
+size = Vector2(419, 42)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="A" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(-464, 103)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_42goo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="A"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_4nf2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="A"]
+texture = ExtResource("2_xn255")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(9, 165)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-356, 0)
+shape = SubResource("RectangleShape2D_op41l")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-355.5, 2)
+scale = Vector2(3.41406, 0.195313)
+texture = ExtResource("2_xn255")
+
+[node name="Spikes2" type="Area2D" parent="."]
+position = Vector2(1, 223)
+collision_layer = 3
+script = ExtResource("3_xn255")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes2"]
+position = Vector2(4.5, 0)
+shape = SubResource("RectangleShape2D_42goo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spikes2"]
+modulate = Color(1, 0.05, 0.05, 1)
+position = Vector2(7, -1.5)
+scale = Vector2(1.82813, 0.164062)
+texture = ExtResource("2_xn255")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Placeholder Enemy" parent="." groups=["enemy"] instance=ExtResource("3_x887k")]
+position = Vector2(389, -96)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(285, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(69.5, -21)
+shape = SubResource("RectangleShape2D_xn255")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(63.5, -21.5)
+scale = Vector2(3.28906, 0.320312)
+texture = ExtResource("2_xn255")
+
+[node name="Control" parent="." instance=ExtResource("5_x887k")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[connection signal="body_entered" from="Spikes2" to="Spikes2" method="_on_body_entered"]

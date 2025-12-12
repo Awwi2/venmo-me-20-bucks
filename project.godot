@@ -12,7 +12,12 @@ config_version=5
 
 config/name="Venmo me 20 bucks"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
+
+[global_group]
+
+enemy=""
+player=""
 
 [input]
 

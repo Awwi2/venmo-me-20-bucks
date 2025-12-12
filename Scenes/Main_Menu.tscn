@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnrsw0o7wnnj6"]
+
+[ext_resource type="Script" uid="uid://de38ulergkdy0" path="res://Scripts/main_menu.gd" id="1_c4tk2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob1pq"]
+bg_color = Color(0.0509804, 0.231373, 0.4, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c4tk2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(576, 325)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.980392, 0.941176, 0.792157, 1)
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 406.0
+offset_top = 290.0
+offset_right = 697.0
+offset_bottom = -290.0
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.235154, 0.572665, 0.461948, 1)
+theme_override_colors/icon_normal_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ob1pq")
+text = "PLAY"
+icon_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 176.0
+offset_top = 51.0
+offset_right = -210.0
+offset_bottom = 148.0
+grow_horizontal = 2
+color = Color(0.976471, 0.341176, 0.219608, 1)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "Venmo me 20 Bucks (pls)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
