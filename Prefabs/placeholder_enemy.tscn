@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7bim"]
 size = Vector2(126, 126)
 
-[node name="Placeholder Enemy" type="CharacterBody2D"]
+[node name="Placeholder Enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_l7bim")
 copy_movement = true
 mirror_movement = true
