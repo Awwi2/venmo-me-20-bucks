@@ -1,5 +1,5 @@
-extends Control
-
+extends Node2D
+signal door_entered
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,5 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_play_pressed() -> void:
-	pass
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		door_entered.emit()

@@ -14,6 +14,10 @@ config/name="Venmo me 20 bucks"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+LevelManager="*res://Scripts/level_manager.gd"
+
 [global_group]
 
 enemy=""
