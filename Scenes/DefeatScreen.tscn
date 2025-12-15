@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8wrr4qbicloq"]
+[gd_scene load_steps=4 format=3 uid="uid://belmjjyllre30"]
 
-[ext_resource type="Shader" uid="uid://d24wllpllm1hp" path="res://Assets/Shaders/WinScreen.gdshader" id="1_68w7f"]
-[ext_resource type="Script" uid="uid://caokr2rnp3h44" path="res://Scripts/win_screen.gd" id="1_d8xbi"]
+[ext_resource type="Script" uid="uid://cufb6mhyhqg3b" path="res://Scripts/defeat_screen.gd" id="1_ocyj4"]
+[ext_resource type="Shader" uid="uid://d24wllpllm1hp" path="res://Assets/Shaders/WinScreen.gdshader" id="2_dj3wk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d8xbi"]
-shader = ExtResource("1_68w7f")
+shader = ExtResource("2_dj3wk")
 shader_parameter/pixelation = 0.001
 shader_parameter/opacity = 1.0
 
 [node name="Control" type="Control"]
+process_mode = 3
+z_index = 1
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -21,7 +23,7 @@ offset_right = 576.0
 offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_d8xbi")
+script = ExtResource("1_ocyj4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_d8xbi")
@@ -44,6 +46,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 100
-text = "U Win"
+text = "Try Again (pls)"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.733
+anchor_right = 1.0
+anchor_bottom = 0.733
+offset_left = 349.0
+offset_top = -47.984
+offset_right = -346.0
+offset_bottom = 48.016
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 37
+text = "Try Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -33,7 +33,10 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite.play("walk")
 	else:
-		animated_sprite.play("jump_up")
+		if velocity.y > 0:
+			animated_sprite.play("jump_down")
+		else:
+			animated_sprite.play("jump_up")
 	
 	if direction:
 		velocity.x = lerp(velocity.x, SPEED*direction, 0.5)

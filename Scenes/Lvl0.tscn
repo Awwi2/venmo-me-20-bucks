@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0amig2pnp45p"]
+[gd_scene load_steps=10 format=3 uid="uid://b0amig2pnp45p"]
 
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_x887k"]
 [ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="2_xn255"]
 [ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Prefabs/placeholder_enemy.tscn" id="3_x887k"]
 [ext_resource type="Script" uid="uid://phyijtvudbvd" path="res://Scripts/spikes.gd" id="3_xn255"]
 [ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="5_x887k"]
+[ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="6_66hmn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op41l"]
 size = Vector2(438, 20)
@@ -16,6 +17,7 @@ size = Vector2(247, 20)
 size = Vector2(419, 42)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(576, 324)
 
 [node name="Venmo" parent="." instance=ExtResource("1_x887k")]
 position = Vector2(-421, 85)
@@ -49,9 +51,6 @@ texture = ExtResource("2_xn255")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Placeholder Enemy" parent="." instance=ExtResource("3_x887k")]
-position = Vector2(389, -96)
-
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(285, 15)
 
@@ -64,12 +63,15 @@ position = Vector2(63.5, -21.5)
 scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("2_xn255")
 
-[node name="Control" parent="." instance=ExtResource("5_x887k")]
+[node name="WinScreen" parent="." instance=ExtResource("5_x887k")]
 visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
+
+[node name="DefeatScreen" parent="." instance=ExtResource("6_66hmn")]
+visible = false
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Placeholder Enemy" parent="Enemies" instance=ExtResource("3_x887k")]
+position = Vector2(389, -96)
 
 [connection signal="body_entered" from="Spikes2" to="Spikes2" method="_on_body_entered"]

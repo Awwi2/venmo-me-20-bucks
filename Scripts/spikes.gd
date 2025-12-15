@@ -14,8 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("u lost lel")
+		LevelManager.fail_level()
 	elif body.is_in_group("enemy"):
-		print("you killed your enemy, good job!")
 		body.queue_free()
-		$"../Control".show()
+		LevelManager.complete_level()
