@@ -53,8 +53,8 @@ func _physics_process(delta: float) -> void:
 	"""
 	if copy_movement:
 		if direction:
-			velocity.x = direction * COPY_SPEED
+			velocity.x = lerp(velocity.x, COPY_SPEED*direction, 0.5)
 		else:
-			velocity.x = move_toward(velocity.x, 0, COPY_SPEED)
+			velocity.x = move_toward(velocity.x, 0, COPY_SPEED/10)
 
 	move_and_slide()
