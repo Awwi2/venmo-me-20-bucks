@@ -21,7 +21,7 @@ func _ready() -> void:
 	print(COPY_SPEED)
 	JUMP_VELOCITY *= jump_multiplier
 
-# @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -37,7 +37,6 @@ func _physics_process(delta: float) -> void:
 	if mirror_movement:
 		direction *= -1
 	
-	"""
 	if direction > 0:
 		animated_sprite.flip_h = false
 	elif direction < 0:
@@ -45,12 +44,14 @@ func _physics_process(delta: float) -> void:
 	
 	if is_on_floor():
 		if direction == 0:
-			animated_sprite.play("Idle")
+			animated_sprite.play("idle")
 		else:
-			animated_sprite.play("Walk")
+			animated_sprite.play("walk")
 	else:
-		animated_sprite.play("Jump")
-	"""
+		if velocity.y > 0:
+			animated_sprite.play("jump_down")
+		else: 
+			animated_sprite.play("jump_up")
 	if copy_movement:
 		if direction:
 			velocity.x = lerp(velocity.x, COPY_SPEED*direction, 0.5)

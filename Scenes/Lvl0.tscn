@@ -73,5 +73,6 @@ visible = false
 
 [node name="Placeholder Enemy" parent="Enemies" instance=ExtResource("3_x887k")]
 position = Vector2(389, -96)
+copy_jump = true
 
 [connection signal="body_entered" from="Spikes2" to="Spikes2" method="_on_body_entered"]
