@@ -42,6 +42,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ob1pq")
 text = "PLAY"
 icon_alignment = 1
 
+[node name="Level_select" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 406.0
+offset_top = 388.0
+offset_right = 697.0
+offset_bottom = -192.0
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.235154, 0.572665, 0.461948, 1)
+theme_override_colors/icon_normal_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ob1pq")
+text = "LEVELS"
+icon_alignment = 1
+
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -66,3 +82,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Level_select" to="." method="_on_level_select_pressed"]

@@ -1,0 +1,123 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7ekhaa6efa2q"]
+
+[ext_resource type="Script" uid="uid://de38ulergkdy0" path="res://Scripts/main_menu.gd" id="1_chbko"]
+[ext_resource type="Texture2D" uid="uid://c4bsresj7bmah" path="res://Assets/lvl0_pic.png" id="2_1cx81"]
+[ext_resource type="Script" uid="uid://e1fc30jv618n" path="res://Scripts/level_selector.gd" id="2_1qomi"]
+[ext_resource type="Texture2D" uid="uid://6oo4t88klk31" path="res://Assets/lvl1_pic.png" id="3_1qomi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob1pq"]
+bg_color = Color(0.0509804, 0.231373, 0.4, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_chbko")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(576, 325)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.980392, 0.941176, 0.792157, 1)
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 406.0
+offset_top = 517.0
+offset_right = 697.0
+offset_bottom = -63.0
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.235154, 0.572665, 0.461948, 1)
+theme_override_colors/icon_normal_color = Color(0.920995, 0.920995, 0.920995, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_ob1pq")
+text = "Back"
+icon_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 176.0
+offset_top = 51.0
+offset_right = -210.0
+offset_bottom = 148.0
+grow_horizontal = 2
+color = Color(0.976471, 0.341176, 0.219608, 1)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "LEVEL SELECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.153
+anchor_top = 0.279
+anchor_right = 0.818
+anchor_bottom = 0.746
+offset_left = -0.256012
+offset_top = 0.207993
+offset_right = -0.335999
+offset_bottom = -0.40802
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+script = ExtResource("2_1qomi")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_1cx81")
+expand_mode = 1
+
+[node name="lvl1_button" type="Button" parent="GridContainer/TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_1qomi")
+expand_mode = 1
+
+[node name="lvl2_button" type="Button" parent="GridContainer/TextureRect2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="GridContainer/TextureRect/lvl1_button" to="GridContainer" method="_on_lvl_1_button_pressed"]
+[connection signal="pressed" from="GridContainer/TextureRect2/lvl2_button" to="GridContainer" method="_on_lvl_2_button_pressed"]

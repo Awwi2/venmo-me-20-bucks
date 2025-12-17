@@ -18,7 +18,7 @@ size = Vector2(419, 42)
 position = Vector2(576, 324)
 
 [node name="Venmo" parent="." instance=ExtResource("1_g4exx")]
-position = Vector2(497, 13)
+position = Vector2(489, 68)
 scale = Vector2(0.7, 0.7)
 
 [node name="Enemies" type="Node2D" parent="."]
@@ -28,23 +28,6 @@ position = Vector2(4, -4)
 position = Vector2(-319, 71)
 scale = Vector2(0.7, 0.7)
 copy_jump = true
-
-[node name="Placeholder Enemy2" parent="Enemies" instance=ExtResource("2_k5gtl")]
-position = Vector2(-9, -94)
-scale = Vector2(0.7, 0.7)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(649, 66)
-scale = Vector2(0.359998, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-356, 0)
-shape = SubResource("RectangleShape2D_op41l")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-355.5, 2)
-scale = Vector2(3.41406, 0.195313)
-texture = ExtResource("3_f7jp5")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(538, 136)
@@ -73,7 +56,7 @@ scale = Vector2(3.41406, 0.195313)
 texture = ExtResource("3_f7jp5")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
-position = Vector2(384, 216)
+position = Vector2(12, 1.52588e-05)
 scale = Vector2(0.359998, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
@@ -85,20 +68,8 @@ position = Vector2(-355.5, 2)
 scale = Vector2(3.41406, 0.195313)
 texture = ExtResource("3_f7jp5")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(-285, 155)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(69.5, -21)
-shape = SubResource("RectangleShape2D_xn255")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_f7jp5")
-
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(-461, -149)
+position = Vector2(-582, -141)
 rotation = 1.60061
 scale = Vector2(1.07302, 1)
 
@@ -111,8 +82,22 @@ position = Vector2(63.5, -21.5)
 scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("3_f7jp5")
 
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+position = Vector2(-59, -312)
+rotation = 1.60061
+scale = Vector2(1.07302, 0.800088)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+position = Vector2(69.5, -21)
+shape = SubResource("RectangleShape2D_xn255")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9"]
+position = Vector2(63.5, -21.5)
+scale = Vector2(3.28906, 0.320312)
+texture = ExtResource("3_f7jp5")
+
 [node name="StaticBody2D8" type="StaticBody2D" parent="."]
-position = Vector2(563, -246)
+position = Vector2(576, -190)
 rotation = 1.60061
 scale = Vector2(1.07302, 1)
 
@@ -126,9 +111,9 @@ scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("3_f7jp5")
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(-66, 113)
+position = Vector2(-210, 163)
 rotation = -0.0116324
-scale = Vector2(0.952617, 3.44495)
+scale = Vector2(2.99504, 1.0111)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2(69.5, -21)
@@ -139,15 +124,13 @@ position = Vector2(63.5, -21.5)
 scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("3_f7jp5")
 
-[node name="Spikes3" parent="." instance=ExtResource("4_s1ade")]
-position = Vector2(-569, -287)
-rotation = 1.54261
-scale = Vector2(0.521319, 1)
-
 [node name="Spikes4" parent="." instance=ExtResource("4_s1ade")]
 position = Vector2(-564, 241)
 rotation = -0.0107249
 scale = Vector2(2.28079, 1)
+
+[node name="Door" parent="." instance=ExtResource("7_h4611")]
+position = Vector2(-460, 53)
 
 [node name="WinScreen" parent="." instance=ExtResource("5_7nfcr")]
 visible = false
@@ -157,6 +140,3 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -4)
-
-[node name="Door" parent="." instance=ExtResource("7_h4611")]
-position = Vector2(-396, 46)
