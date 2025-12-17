@@ -17,4 +17,4 @@ func _on_body_entered(body: Node2D) -> void:
 		LevelManager.fail_level()
 	elif body.is_in_group("enemy"):
 		body.queue_free()
-		LevelManager.complete_level()
+		#LevelManager.complete_level()

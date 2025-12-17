@@ -7,6 +7,7 @@
 size = Vector2(10, 20)
 
 [node name="Door" type="Node2D"]
+scale = Vector2(6, 6)
 script = ExtResource("1_bp8im")
 
 [node name="Area2D" type="Area2D" parent="."]

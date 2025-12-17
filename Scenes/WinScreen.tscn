@@ -9,6 +9,7 @@ shader_parameter/pixelation = 0.001
 shader_parameter/opacity = 1.0
 
 [node name="Control" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,3 +64,5 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 31
 text = "Next Level"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -2,7 +2,7 @@ extends Node
 
 var winscreen
 var defeatscreen
-
+static var current_level = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,3 +36,8 @@ func freeze_level():
 func replay_level():
 	get_tree().reload_current_scene()
 	get_tree().paused = false
+
+func next_level():
+	get_tree().paused = false
+	current_level += 1
+	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl" + str(current_level) + ".tscn")

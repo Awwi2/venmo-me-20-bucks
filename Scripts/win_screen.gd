@@ -14,3 +14,7 @@ func pixelate_background():
 	for i in range(1,30):
 		$ColorRect.material.set_shader_parameter("pixelation", i*0.001)
 		await get_tree().create_timer(0.05).timeout
+
+
+func _on_button_pressed() -> void:
+	LevelManager.next_level()
