@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7ekhaa6efa2q"]
+[gd_scene load_steps=7 format=3 uid="uid://c7ekhaa6efa2q"]
 
 [ext_resource type="Script" uid="uid://de38ulergkdy0" path="res://Scripts/main_menu.gd" id="1_chbko"]
 [ext_resource type="Texture2D" uid="uid://c4bsresj7bmah" path="res://Assets/lvl0_pic.png" id="2_1cx81"]
 [ext_resource type="Script" uid="uid://e1fc30jv618n" path="res://Scripts/level_selector.gd" id="2_1qomi"]
 [ext_resource type="Texture2D" uid="uid://6oo4t88klk31" path="res://Assets/lvl1_pic.png" id="3_1qomi"]
+[ext_resource type="Texture2D" uid="uid://co18ghu7opjew" path="res://Assets/lvl2_pic.png" id="5_8sr8g"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob1pq"]
 bg_color = Color(0.0509804, 0.231373, 0.4, 1)
@@ -75,13 +76,13 @@ anchor_left = 0.153
 anchor_top = 0.279
 anchor_right = 0.818
 anchor_bottom = 0.746
-offset_left = -0.256012
-offset_top = 0.207993
-offset_right = -0.335999
-offset_bottom = -0.40802
+offset_left = 0.744003
+offset_top = -3.79201
+offset_right = 0.664001
+offset_bottom = -4.40802
 grow_horizontal = 2
 grow_vertical = 2
-columns = 2
+columns = 3
 script = ExtResource("2_1qomi")
 
 [node name="TextureRect" type="TextureRect" parent="GridContainer"]
@@ -91,6 +92,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_1cx81")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="lvl1_button" type="Button" parent="GridContainer/TextureRect"]
 modulate = Color(1, 1, 1, 0)
@@ -108,6 +110,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("3_1qomi")
 expand_mode = 1
+stretch_mode = 4
 
 [node name="lvl2_button" type="Button" parent="GridContainer/TextureRect2"]
 modulate = Color(1, 1, 1, 0)
@@ -118,6 +121,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="TextureRect3" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("5_8sr8g")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="lvl3_button" type="Button" parent="GridContainer/TextureRect3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="GridContainer/TextureRect/lvl1_button" to="GridContainer" method="_on_lvl_1_button_pressed"]
 [connection signal="pressed" from="GridContainer/TextureRect2/lvl2_button" to="GridContainer" method="_on_lvl_2_button_pressed"]
+[connection signal="pressed" from="GridContainer/TextureRect3/lvl3_button" to="GridContainer" method="_on_lvl_3_button_pressed"]

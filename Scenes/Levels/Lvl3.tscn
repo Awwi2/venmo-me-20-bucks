@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=3 uid="uid://cerqg8d7ypd0p"]
+
+[ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_ayy6f"]
+[ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Prefabs/placeholder_enemy.tscn" id="2_y1d3u"]
+[ext_resource type="PackedScene" uid="uid://c2suumpyloino" path="res://Prefabs/door.tscn" id="5_at4sb"]
+[ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="6_6pxut"]
+[ext_resource type="PackedScene" uid="uid://0a6rkmm5bv42" path="res://Prefabs/level_obstacle.tscn" id="6_y1d3u"]
+[ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="7_pukyc"]
+[ext_resource type="PackedScene" uid="uid://dxb0f2fdfe4ih" path="res://Prefabs/lever_door.tscn" id="7_r1ewd"]
+[ext_resource type="PackedScene" uid="uid://b1jkb20erxgro" path="res://Prefabs/lever.tscn" id="8_5pmfy"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(576, 324)
+
+[node name="Venmo" parent="." instance=ExtResource("1_ayy6f")]
+position = Vector2(368, -179)
+scale = Vector2(0.7, 0.7)
+
+[node name="Enemies" type="Node2D" parent="."]
+position = Vector2(4, -4)
+
+[node name="Placeholder Enemy2" parent="Enemies" instance=ExtResource("2_y1d3u")]
+position = Vector2(-302, 232)
+scale = Vector2(0.698018, 0.7)
+mirror_movement = false
+copy_jump = true
+jump_multiplier = 1.05
+
+[node name="Door" parent="." instance=ExtResource("5_at4sb")]
+position = Vector2(428, 214)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(8, -4)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("6_y1d3u")]
+position = Vector2(215, 284)
+scale = Vector2(2.79302, 0.800088)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("6_y1d3u")]
+position = Vector2(-531, 6)
+rotation = 4.71239
+scale = Vector2(2.31302, 0.800088)
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("6_y1d3u")]
+position = Vector2(14, -29)
+rotation = 4.71239
+scale = Vector2(2.31302, 0.800088)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("6_y1d3u")]
+position = Vector2(607, -14)
+rotation = 4.71239
+scale = Vector2(2.31302, 0.800088)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("6_y1d3u")]
+position = Vector2(275, -117)
+scale = Vector2(0.953021, 0.800088)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("7_r1ewd")]
+position = Vector2(494, -99)
+scale = Vector2(1.15665, 0.285039)
+enabled = true
+
+[node name="Lever" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-451, -288)
+scale = Vector2(0.3, 0.3)
+toggle = false
+door = NodePath("../StaticBody2D")
+
+[node name="Lever2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-103, 34)
+scale = Vector2(0.3, 0.3)
+toggle = false
+door = NodePath("../LeverDoor")
+
+[node name="Lever3" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-244, -110)
+scale = Vector2(0.3, 0.3)
+toggle = false
+door = NodePath("../LeverDoor2")
+
+[node name="LeverDoor" parent="." instance=ExtResource("7_r1ewd")]
+visible = false
+position = Vector2(-299, 120)
+scale = Vector2(1.10827, 0.165035)
+
+[node name="LeverDoor2" parent="." instance=ExtResource("7_r1ewd")]
+visible = false
+position = Vector2(-416, -1)
+scale = Vector2(1.10827, 0.165035)
+
+[node name="WinScreen" parent="." instance=ExtResource("6_6pxut")]
+visible = false
+
+[node name="DefeatScreen" parent="." instance=ExtResource("7_pukyc")]
+visible = false
