@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://chekj3w24rcvk" path="res://Assets/Venmo.png" id="2_5wxv7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4nf2p"]
-size = Vector2(112, 95)
+size = Vector2(100, 92)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y5hcb"]
 atlas = ExtResource("2_5wxv7")
@@ -75,13 +75,12 @@ animations = [{
 script = ExtResource("1_5wxv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 15.5)
+position = Vector2(2, 18)
 shape = SubResource("RectangleShape2D_4nf2p")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1.5, -1.90735e-06)
-scale = Vector2(7.9375, 7.875)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_08u7w")
 animation = &"walk"
 autoplay = "idle"

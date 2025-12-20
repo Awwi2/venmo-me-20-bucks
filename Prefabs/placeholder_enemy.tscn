@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0dfe8gajwc0g" path="res://Assets/Doggy.png" id="2_dg3n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l7bim"]
-size = Vector2(109, 102)
+size = Vector2(103.25, 95.625)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_logo1"]
 atlas = ExtResource("2_dg3n0")
@@ -72,6 +72,7 @@ animations = [{
 }]
 
 [node name="Placeholder Enemy" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(8, 8)
 script = ExtResource("1_l7bim")
 copy_movement = true
 mirror_movement = true
@@ -79,13 +80,13 @@ movement_multiplier = 1.0
 jump_multiplier = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["enemy"]]
-position = Vector2(-0.5, 12)
+position = Vector2(4, 16.0625)
 shape = SubResource("RectangleShape2D_l7bim")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-1.19209e-07, 1.90735e-06)
-scale = Vector2(7.875, 7.875)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_rr2s6")
 animation = &"idle"
 autoplay = "idle"
