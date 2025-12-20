@@ -17,3 +17,9 @@ func _on_play_pressed() -> void:
 
 func _on_level_select_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/LevelSelect.tscn")
+
+
+func _on_quit_pressed() -> void:
+	#get_tree().quit()
+	#this too shall
+	pass

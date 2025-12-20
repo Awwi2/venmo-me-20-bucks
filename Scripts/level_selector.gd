@@ -20,4 +20,8 @@ func _on_lvl_1_button_pressed() -> void:
 
 
 func _on_lvl_3_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl2.tscn")
+
+
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Main_Menu.tscn")

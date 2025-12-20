@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0amig2pnp45p"]
+[gd_scene load_steps=12 format=4 uid="uid://b0amig2pnp45p"]
 
+[ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_hyse0"]
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_x887k"]
 [ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="2_xn255"]
 [ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Prefabs/placeholder_enemy.tscn" id="3_x887k"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="5_x887k"]
 [ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="6_66hmn"]
 [ext_resource type="PackedScene" uid="uid://c2suumpyloino" path="res://Prefabs/door.tscn" id="7_lb4v7"]
+[ext_resource type="PackedScene" uid="uid://2rvpc7xbvbnn" path="res://Scenes/PauseScreen.tscn" id="8_80i08"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op41l"]
 size = Vector2(438, 20)
@@ -16,6 +18,28 @@ size = Vector2(419, 42)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(576, 324)
+
+[node name="Node2D" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Node2D"]
+scale = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAD7//3/AAAAAAMAAAD7//7/AAAAAAMAAAD7////AAAAAAMAAAD7/wAAAAAAAAMAAAD7/wEAAAAAAAMAAAD7/wIAAAAAAAMAAAD8//3/AAAAAAMAAAD8//7/AAAAAAMAAAD8////AAAAAAMAAAD8/wAAAAAAAAMAAAD8/wEAAAAAAAMAAAD8/wIAAAAAAAMAAAD9//3/AAAAAAMAAAD9//7/AAAAAAMAAAD9////AAAAAAMAAAD9/wAAAAAAAAMAAAD9/wEAAAAAAAMAAAD9/wIAAAAAAAMAAAD+//3/AAAAAAMAAAD+//7/AAAAAAMAAAD+////AAAAAAMAAAD+/wAAAAAAAAMAAAD+/wEAAAAAAAMAAAD+/wIAAAAAAAMAAAD///3/AAAAAAMAAAD///7/AAAAAAMAAAD/////AAAAAAMAAAD//wAAAAAAAAMAAAD//wEAAAAAAAMAAAD//wIAAAAAAAMAAAAAAP3/AAAAAAMAAAAAAP7/AAAAAAMAAAAAAP//AAAAAAMAAAAAAAAAAAAAAAMAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAMAAAABAP3/AAAAAAMAAAABAP7/AAAAAAMAAAABAP//AAAAAAMAAAABAAAAAAAAAAMAAAABAAEAAAAAAAMAAAABAAIAAAAAAAMAAAACAP3/AAAAAAMAAAACAP7/AAAAAAMAAAACAP//AAAAAAMAAAACAAAAAAAAAAMAAAACAAEAAAAAAAMAAAACAAIAAAAAAAMAAAADAP3/AAAAAAMAAAADAP7/AAAAAAMAAAADAP//AAAAAAMAAAADAAAAAAAAAAMAAAADAAEAAAAAAAMAAAADAAIAAAAAAAMAAAAEAP3/AAAAAAMAAAAEAP7/AAAAAAMAAAAEAP//AAAAAAMAAAAEAAAAAAAAAAMAAAAEAAEAAAAAAAMAAAAEAAIAAAAAAAMAAAA=")
+tile_set = ExtResource("1_hyse0")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="Node2D"]
+scale = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAD+////AAABAAYAAAD/////AAACAAYAAAAAAAIAAAABAAYAAAAAAAEAAAABAAYAAAAAAAAAAAABAAYAAAABAAIAAAACAAYAAAACAAIAAAACAAYAAAADAAIAAAACAAYAAAAEAAIAAAACAAYAAAABAAEAAAACAAYAAAACAAEAAAACAAYAAAADAAEAAAACAAYAAAAEAAEAAAACAAYAAAABAAAAAAACAAYAAAACAAAAAAACAAYAAAADAAAAAAACAAYAAAAEAAAAAAACAAYAAAD//wIAAAAGAAAAAAA=")
+tile_set = ExtResource("1_hyse0")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="Node2D"]
+texture_filter = 1
+scale = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAD//wEAAAAOAAUAAAD//wIAAAAOAAYAAAD+/wIAAAAKAAYAAAD+/wEAAAAKAAYAAAAAAAIAAAAKAAUAAAAAAAAAAAAJAAQAAAAAAAEAAAAKAAUAAAD+/wAAAAAHAAQAAAD//wAAAAAIAAQAAAD+////AAAHAAMAAAD/////AAAIAAMAAAABAAIAAAAEAAYAAAABAAEAAAAEAAUAAAACAAEAAAAFAAUAAAACAAIAAAAFAAYAAAAAAP//AAAJAAMAAAABAP//AAALAAQAAAACAP//AAALAAQAAAADAP//AAALAAQAAAAEAP//AAALAAQAAAA=")
+tile_set = ExtResource("1_hyse0")
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="Node2D"]
+tile_set = ExtResource("1_hyse0")
 
 [node name="Venmo" parent="." instance=ExtResource("1_x887k")]
 position = Vector2(-421, 103)
@@ -77,6 +101,8 @@ visible = false
 
 [node name="DefeatScreen" parent="." instance=ExtResource("6_66hmn")]
 visible = false
+
+[node name="Control" parent="." instance=ExtResource("8_80i08")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
