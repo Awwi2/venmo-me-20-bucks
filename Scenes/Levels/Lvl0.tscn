@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_hyse0"]
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_x887k"]
-[ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="2_xn255"]
 [ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Prefabs/placeholder_enemy.tscn" id="3_x887k"]
+[ext_resource type="Texture2D" uid="uid://bnin4crjsk2yp" path="res://Assets/Floor.png" id="4_80i08"]
 [ext_resource type="PackedScene" uid="uid://3q32mknaia2d" path="res://Prefabs/spikes.tscn" id="4_p1306"]
 [ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="5_x887k"]
 [ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="6_66hmn"]
@@ -65,9 +65,10 @@ position = Vector2(-356, 0)
 shape = SubResource("RectangleShape2D_op41l")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-355.5, 2)
-scale = Vector2(3.41406, 0.195313)
-texture = ExtResource("2_xn255")
+texture_filter = 1
+position = Vector2(-355.5, -8.50359e-06)
+scale = Vector2(27.4375, 3.33333)
+texture = ExtResource("4_80i08")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2(-426, -72)
@@ -77,9 +78,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("2_xn255")
+texture_filter = 1
+position = Vector2(70, -21)
+scale = Vector2(26.25, 7)
+texture = ExtResource("4_80i08")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 position = Vector2(167, 104)
@@ -89,16 +91,23 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("2_xn255")
+texture_filter = 1
+position = Vector2(69.5, -21)
+scale = Vector2(26.1875, 7)
+texture = ExtResource("4_80i08")
 
 [node name="Spikes3" parent="." instance=ExtResource("4_p1306")]
 position = Vector2(-542, -340)
 rotation = 1.54261
 
+[node name="Spikes4" parent="." instance=ExtResource("4_p1306")]
+position = Vector2(93, 228)
+
+[node name="Spikes4" parent="Spikes4" instance=ExtResource("4_p1306")]
+position = Vector2(448, 0)
+
 [node name="Spikes2" parent="." instance=ExtResource("4_p1306")]
-position = Vector2(1, 223)
+position = Vector2(-355, 228)
 
 [node name="WinScreen" parent="." instance=ExtResource("5_x887k")]
 visible = false

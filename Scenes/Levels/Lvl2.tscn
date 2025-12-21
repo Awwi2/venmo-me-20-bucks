@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_0v2is"]
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_3nuqr"]
 [ext_resource type="PackedScene" uid="uid://b87e4x5lme21k" path="res://Prefabs/placeholder_enemy.tscn" id="2_0v2is"]
-[ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="3_lqbqd"]
+[ext_resource type="Texture2D" uid="uid://bnin4crjsk2yp" path="res://Assets/Floor.png" id="4_0v2is"]
 [ext_resource type="PackedScene" uid="uid://3q32mknaia2d" path="res://Prefabs/spikes.tscn" id="4_bw2f6"]
 [ext_resource type="PackedScene" uid="uid://c2suumpyloino" path="res://Prefabs/door.tscn" id="5_p3xk4"]
 [ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="6_buj31"]
@@ -73,9 +73,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D9"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(69.2736, -21.0006)
+scale = Vector2(26.1784, 6.69525)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="."]
 position = Vector2(-202, 148)
@@ -87,9 +88,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D12"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(67.6256, -20.956)
+scale = Vector2(25.9796, 6.93926)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="."]
 position = Vector2(268, 46)
@@ -101,9 +103,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D13"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(63.898, -21.1709)
+scale = Vector2(26.8296, 7.01267)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="."]
 position = Vector2(-244, -100)
@@ -115,9 +118,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D14"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(68.3163, -20.8429)
+scale = Vector2(25.935, 7.11047)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D15" type="StaticBody2D" parent="."]
 position = Vector2(289, -185)
@@ -129,13 +133,14 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D15"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(69.4675, -20.8417)
+scale = Vector2(26.1335, 6.90293)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="."]
 position = Vector2(339, 114)
-rotation = 1.581
+rotation = 1.5708
 scale = Vector2(3.11302, 0.800088)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
@@ -143,13 +148,14 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D10"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(-40.0227, -21.5)
+scale = Vector2(12.8136, 7.06659)
+texture = ExtResource("4_0v2is")
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="."]
 position = Vector2(-411, 108)
-rotation = 1.581
+rotation = 1.5708
 scale = Vector2(3.11302, 0.800088)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
@@ -157,9 +163,10 @@ position = Vector2(69.5, -21)
 shape = SubResource("RectangleShape2D_xn255")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D11"]
-position = Vector2(63.5, -21.5)
-scale = Vector2(3.28906, 0.320312)
-texture = ExtResource("3_lqbqd")
+texture_filter = 1
+position = Vector2(-35.7137, -21.5678)
+scale = Vector2(12.4981, 7.17584)
+texture = ExtResource("4_0v2is")
 
 [node name="Spikes4" parent="." instance=ExtResource("4_bw2f6")]
 position = Vector2(-405, -340)
@@ -176,3 +183,9 @@ visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(8, -4)
+
+[node name="Floor" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-163.25, -344.5)
+scale = Vector2(2.15625, 14.1667)
+texture = ExtResource("4_0v2is")

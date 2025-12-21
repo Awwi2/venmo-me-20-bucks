@@ -89,7 +89,7 @@ rotation = 4.71239
 scale = Vector2(2.31302, 0.800088)
 
 [node name="StaticBody2D14" parent="." instance=ExtResource("6_y1d3u")]
-position = Vector2(14, -29)
+position = Vector2(9, -40)
 rotation = 4.71239
 scale = Vector2(2.31302, 0.800088)
 
@@ -103,8 +103,8 @@ position = Vector2(275, -117)
 scale = Vector2(0.953021, 0.800088)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("7_r1ewd")]
-position = Vector2(494, -99)
-scale = Vector2(1.15665, 0.285039)
+position = Vector2(491, -100)
+scale = Vector2(1.31665, 0.245039)
 enabled = true
 
 [node name="LeverDoor" parent="." instance=ExtResource("7_r1ewd")]

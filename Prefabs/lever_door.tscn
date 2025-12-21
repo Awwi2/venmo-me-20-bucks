@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxb0f2fdfe4ih"]
 
-[ext_resource type="Texture2D" uid="uid://dn44ernhrvuoi" path="res://Assets/icon.svg" id="1_47bcu"]
 [ext_resource type="Script" uid="uid://dwd22ih86m0bc" path="res://Prefabs/lever_door.gd" id="1_cy4mc"]
+[ext_resource type="Texture2D" uid="uid://bnin4crjsk2yp" path="res://Assets/Floor.png" id="2_cy4mc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cy4mc"]
 size = Vector2(128, 127)
@@ -16,4 +16,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_cy4mc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_47bcu")
+texture_filter = 1
+position = Vector2(1.90735e-06, 0.497496)
+scale = Vector2(8.02685, 21.0605)
+texture = ExtResource("2_cy4mc")
