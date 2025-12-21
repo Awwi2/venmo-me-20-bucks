@@ -12,14 +12,17 @@ func _process(delta: float) -> void:
 
 
 func _on_lvl_2_button_pressed() -> void:
+	LevelManager.current_level = 1
 	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl1.tscn")
 
 
 func _on_lvl_1_button_pressed() -> void:
+	LevelManager.current_level = 0
 	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl0.tscn")
 
 
 func _on_lvl_3_button_pressed() -> void:
+	LevelManager.current_level = 2
 	get_tree().change_scene_to_file("res://Scenes/Levels/Lvl2.tscn")
 
 
