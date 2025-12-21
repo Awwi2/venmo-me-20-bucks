@@ -38,4 +38,3 @@ scale = Vector2(-0.0585005, -6.76208)
 
 [node name="Placeholder Enemy" parent="." instance=ExtResource("3_4nf2p")]
 position = Vector2(338, -77)
-scale = Vector2(1, 1)
