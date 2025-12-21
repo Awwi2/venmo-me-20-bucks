@@ -16,7 +16,7 @@ size = Vector2(438, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn255"]
 size = Vector2(419, 42)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
 texture_filter = 1
@@ -36,7 +36,6 @@ tile_map_data = PackedByteArray("AAD5/wEAAAAEAAMAAAD6/wEAAAAEAAMAAAD7/wEAAAAEAAM
 tile_set = ExtResource("1_hyse0")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Tilemaps"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAAAP7/AAALAAQAAAABAP7/AAALAAQAAAACAP7/AAAMAAQAAAD///7/AAAKAAQAAAACAAAAAAAKAAYAAAACAP//AAAKAAYAAAAEAAAAAAAKAAUAAAAEAP//AAAKAAUAAAADAAAAAAALAAYAAAADAP//AAALAAYAAAD6/wAAAAAKAAUAAAD6////AAAKAAUAAAD5//7/AAAFAAQAAAD6//7/AAAGAAQAAAD5//3/AAAFAAMAAAA=")
 tile_set = ExtResource("1_hyse0")
 

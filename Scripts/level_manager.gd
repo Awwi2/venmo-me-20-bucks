@@ -39,7 +39,7 @@ func replay_level():
 
 func next_level():
 	get_tree().paused = false
-	if current_level <= 3:
+	if current_level <= 2:
 		current_level += 1
 		get_tree().change_scene_to_file("res://Scenes/Levels/Lvl" + str(current_level) + ".tscn")
 	else:

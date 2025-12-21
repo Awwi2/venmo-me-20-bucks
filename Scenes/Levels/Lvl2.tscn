@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://3f8is2448r4e"]
+[gd_scene load_steps=11 format=4 uid="uid://3f8is2448r4e"]
 
 [ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_0v2is"]
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_3nuqr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c2suumpyloino" path="res://Prefabs/door.tscn" id="5_p3xk4"]
 [ext_resource type="PackedScene" uid="uid://b8wrr4qbicloq" path="res://Scenes/WinScreen.tscn" id="6_buj31"]
 [ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="7_xbs6m"]
+[ext_resource type="PackedScene" uid="uid://2rvpc7xbvbnn" path="res://Scenes/PauseScreen.tscn" id="9_lqbqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn255"]
 size = Vector2(419, 42)
@@ -36,7 +37,6 @@ tile_map_data = PackedByteArray("AAACAP3/AAAIAAIAAAADAP3/AAAJAAIAAAACAPz/AAAGAAE
 tile_set = ExtResource("1_0v2is")
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="Tilemaps"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAAEAP//AAABAAQAAAAEAAAAAAABAAQAAAAEAP7/AAABAAQAAAAEAP3/AAABAAQAAAD7/wAAAAABAAMAAAD7////AAABAAMAAAD7//7/AAABAAMAAAD7//3/AAABAAMAAAD7//z/AAANAAQAAAA=")
 tile_set = ExtResource("1_0v2is")
 
@@ -179,6 +179,9 @@ position = Vector2(286, -248)
 visible = false
 
 [node name="DefeatScreen" parent="." instance=ExtResource("7_xbs6m")]
+visible = false
+
+[node name="PauseScreen" parent="." instance=ExtResource("9_lqbqd")]
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cerqg8d7ypd0p"]
+[gd_scene load_steps=11 format=4 uid="uid://cerqg8d7ypd0p"]
 
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_ayy6f"]
 [ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_r1ewd"]
@@ -9,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="7_pukyc"]
 [ext_resource type="PackedScene" uid="uid://dxb0f2fdfe4ih" path="res://Prefabs/lever_door.tscn" id="7_r1ewd"]
 [ext_resource type="PackedScene" uid="uid://b1jkb20erxgro" path="res://Prefabs/lever.tscn" id="8_5pmfy"]
+[ext_resource type="PackedScene" uid="uid://2rvpc7xbvbnn" path="res://Scenes/PauseScreen.tscn" id="10_5pmfy"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
 texture_filter = 1
@@ -34,7 +35,6 @@ tile_map_data = PackedByteArray("AAABAAAAAAALAAQAAAAAAAAAAAALAAQAAAACAAAAAAAMAAQ
 tile_set = ExtResource("1_r1ewd")
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="Tilemaps"]
-scale = Vector2(1, 1)
 tile_map_data = PackedByteArray("AAACAAIAAAABAAUAAAACAAEAAAABAAUAAAACAAAAAAABAAUAAAD///7/AAAJAAEAAAAEAP7/AAAJAAAAAAADAP3/AAAFAAEAAAACAPz/AAAFAAEAAAABAPz/AAAEAAIAAAAAAP3/AAAEAAIAAAAAAP7/AAAFAAIAAAABAP3/AAAFAAIAAAADAP7/AAAIAAEAAAACAP3/AAAEAAEAAAACAP7/AAANAAQAAAACAP//AAABAAUAAAD5//7/AAANAAQAAAD7//7/AAAJAAAAAAD6//3/AAAFAAEAAAD5//z/AAAFAAEAAAD6//7/AAAIAAEAAAD5//3/AAAEAAEAAAA=")
 tile_set = ExtResource("1_r1ewd")
 
@@ -121,4 +121,7 @@ scale = Vector2(1.10827, 0.165035)
 visible = false
 
 [node name="DefeatScreen" parent="." instance=ExtResource("7_pukyc")]
+visible = false
+
+[node name="PauseScreen" parent="." instance=ExtResource("10_5pmfy")]
 visible = false

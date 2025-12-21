@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://lbbiynlf81tg"]
+[gd_scene load_steps=12 format=4 uid="uid://lbbiynlf81tg"]
 
 [ext_resource type="PackedScene" uid="uid://blv5p0nwhscbq" path="res://Prefabs/player.tscn" id="1_g4exx"]
 [ext_resource type="TileSet" uid="uid://clcmhvbslph5m" path="res://Assets/Tileset.tres" id="1_k5gtl"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bnin4crjsk2yp" path="res://Assets/Floor.png" id="5_k5gtl"]
 [ext_resource type="PackedScene" uid="uid://belmjjyllre30" path="res://Scenes/DefeatScreen.tscn" id="6_uimwk"]
 [ext_resource type="PackedScene" uid="uid://c2suumpyloino" path="res://Prefabs/door.tscn" id="7_h4611"]
+[ext_resource type="PackedScene" uid="uid://2rvpc7xbvbnn" path="res://Scenes/PauseScreen.tscn" id="8_k5gtl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op41l"]
 size = Vector2(461.111, 20)
@@ -15,7 +16,7 @@ size = Vector2(461.111, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xn255"]
 size = Vector2(419, 42)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D4" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
 texture_filter = 1
@@ -157,6 +158,9 @@ position = Vector2(-495, 90)
 visible = false
 
 [node name="DefeatScreen" parent="." instance=ExtResource("6_uimwk")]
+visible = false
+
+[node name="PauseScreen" parent="." instance=ExtResource("8_k5gtl")]
 visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
