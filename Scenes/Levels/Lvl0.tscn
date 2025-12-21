@@ -108,6 +108,10 @@ position = Vector2(448, 0)
 [node name="Spikes2" parent="." instance=ExtResource("4_p1306")]
 position = Vector2(-355, 228)
 
+[node name="Spikes5" parent="." instance=ExtResource("4_p1306")]
+position = Vector2(-1208, 225)
+scale = Vector2(2.76965, 1)
+
 [node name="WinScreen" parent="." instance=ExtResource("5_x887k")]
 visible = false
 
