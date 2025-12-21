@@ -49,12 +49,12 @@ tile_map_data = PackedByteArray("AAACAP3/AAAHAAMAAAACAP7/AAAHAAQAAAADAP3/AAAIAAM
 tile_set = ExtResource("1_hyse0")
 
 [node name="Venmo" parent="." instance=ExtResource("1_x887k")]
-position = Vector2(-422, 106)
+position = Vector2(-336, 105)
 
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Placeholder Enemy" parent="Enemies" instance=ExtResource("3_x887k")]
-position = Vector2(-420, -162)
+position = Vector2(-352, -159)
 mirror_movement = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -94,9 +94,8 @@ scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("2_xn255")
 
 [node name="Spikes3" parent="." instance=ExtResource("4_p1306")]
-position = Vector2(-573, -283)
+position = Vector2(-542, -340)
 rotation = 1.54261
-scale = Vector2(0.521319, 1)
 
 [node name="Spikes2" parent="." instance=ExtResource("4_p1306")]
 position = Vector2(1, 223)

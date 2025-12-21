@@ -162,9 +162,8 @@ scale = Vector2(3.28906, 0.320312)
 texture = ExtResource("3_lqbqd")
 
 [node name="Spikes4" parent="." instance=ExtResource("4_bw2f6")]
-position = Vector2(-306, -317)
+position = Vector2(-405, -340)
 rotation = -0.0107249
-scale = Vector2(0.600028, 1)
 
 [node name="Door" parent="." instance=ExtResource("5_p3xk4")]
 position = Vector2(286, -248)
