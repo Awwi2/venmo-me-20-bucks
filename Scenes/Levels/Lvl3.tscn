@@ -46,6 +46,21 @@ tile_set = ExtResource("1_r1ewd")
 tile_map_data = PackedByteArray("AAACAAIAAAAKAAYAAAACAAEAAAAKAAYAAAAEAAIAAAAKAAUAAAAEAAEAAAAKAAUAAAADAAIAAAALAAYAAAADAAEAAAALAAYAAAACAAAAAAAEAAQAAAADAAAAAAAFAAQAAAAEAAAAAAAGAAQAAAADAP//AAAFAAMAAAABAP3/AAAOAAMAAAACAP3/AAAPAAMAAAD5/wIAAAAKAAYAAAD5/wEAAAAKAAYAAAD7/wIAAAAKAAUAAAD7/wEAAAAKAAUAAAD5/wAAAAAEAAQAAAD6/wAAAAAFAAQAAAD7/wAAAAAGAAQAAAD6////AAAFAAMAAAD5//3/AAANAAMAAAA=")
 tile_set = ExtResource("1_r1ewd")
 
+[node name="Lever" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-449, -265)
+toggle = false
+door = NodePath("../StaticBody2D")
+
+[node name="Lever2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-103, 34)
+toggle = false
+door = NodePath("../LeverDoor")
+
+[node name="Lever3" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
+position = Vector2(-244, -110)
+toggle = false
+door = NodePath("../LeverDoor2")
+
 [node name="Venmo" parent="." instance=ExtResource("1_ayy6f")]
 position = Vector2(371, -165)
 
@@ -91,24 +106,6 @@ scale = Vector2(0.953021, 0.800088)
 position = Vector2(494, -99)
 scale = Vector2(1.15665, 0.285039)
 enabled = true
-
-[node name="Lever" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
-position = Vector2(-449, -265)
-scale = Vector2(0.3, 0.3)
-toggle = false
-door = NodePath("../StaticBody2D")
-
-[node name="Lever2" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
-position = Vector2(-103, 34)
-scale = Vector2(0.3, 0.3)
-toggle = false
-door = NodePath("../LeverDoor")
-
-[node name="Lever3" parent="." node_paths=PackedStringArray("door") instance=ExtResource("8_5pmfy")]
-position = Vector2(-244, -110)
-scale = Vector2(0.3, 0.3)
-toggle = false
-door = NodePath("../LeverDoor2")
 
 [node name="LeverDoor" parent="." instance=ExtResource("7_r1ewd")]
 visible = false
